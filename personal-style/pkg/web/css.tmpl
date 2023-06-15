@@ -1,0 +1,105 @@
+{{define "base_css"}}
+html, body { 
+  margin: 0; 
+  padding: 0; 
+  background-color: {{.Colors.Background}}; 
+  font-family: {{.Fonts.Primary}}, {{.Fonts.Secondary}}, {{.Fonts.Category}};
+}
+{{end}}
+
+{{define "layout_css"}}
+#top-container {
+  margin: 0 auto;
+  width: 100vw;
+  height: 5vh;
+  background-color: {{.Colors.Secondary}};
+}
+
+#main-container { 
+    margin: 0 auto;
+    height: 100vh;
+    min-height: 360px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap; 
+    background-color: {{.Colors.Background}};
+    min-width: 480px;
+}
+    
+#bottom-container {
+  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+  background-color: #7f1ae5;
+  color: #0D0D0C;
+}
+
+#base {
+  margin: 0 auto;
+  width: 100vw;
+  height: 8vh;
+  background-color: #0D0D0C;
+  font-weight: 700;
+  color: #7f1ae5;
+  text-align: center;
+  justify-content: flex-end;
+}
+{{end}}
+
+{{define "content_css"}}
+.main-content {
+      color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      padding-left: 64px;
+}
+
+.main-content h1 {
+    font-size: calc(72px + (24 - 16) * (100vw - 360px)/(960-360));
+    font-weight: 700;
+}
+
+.main-content h2 {
+    font-size:  calc(24px + (24 - 16) * (100vw - 360px)/(960-360));
+    padding-bottom: 24px;
+}
+
+.main-content button {
+    font-size: calc(24px + (24 - 16) * (100vw - 360px)/(960-360));
+    width: 20vw;
+    height: 8vh;
+    border-radius: 10px;
+    border-width: 6px;
+    border-color: #7f1ae5;
+    font-weight: 700;
+    text-align: center;
+
+.bottom-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    color: #0D0D0C;
+    width: 70vw;
+}
+
+.bottom-content h1, .bottom-content h2 {
+    font-size: calc(48px + (24 - 16) * (100vw - 360px)/(960-360));
+    text-shadow: 2px 2px #f5f5ff5;
+    padding-left: 64px;
+}
+
+.bottom-content h2 {
+    font-size: calc(24px + (24 - 16) * (100vw - 360px)/(960-360));
+}
+
+.gap {
+  width: 100vw;
+  height: 28vh;
+  margin: 0 auto;
+}
+{{end}}
